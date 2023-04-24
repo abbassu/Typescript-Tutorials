@@ -71,3 +71,70 @@ function addAll(...nums:(number)[]  ):number{
 }
 console.log("--------------------------")
 console.log(addAll(10,20,300,10.5,+true))
+
+
+//////////////////////// 11
+
+
+const add = function (num1:number,num2:number):number {
+    return num1+num2
+}
+
+console.log(add(4,22))
+
+const addArrow =  (num1:number,num2:number):number =>{
+    return num1+num2
+}
+
+console.log(addArrow(77,22))
+
+
+//////////////////////// 12
+
+// Data Types/
+type st=string
+let name1:st="abbas"
+name1="ahmad"
+
+
+
+type standnum=string |number
+let m1:standnum="ddddddd"
+m1=55
+
+//////////////////////// 13
+
+type Button={
+    up:string,
+    down:string,
+    left:string,
+    rigth:string,
+}
+type last=Button&{
+    x:boolean
+}
+let fla:Button;
+fla={up:"rrrrr",down:"rrrrrrrrrrr",rigth:"ddddddd",left:"ssss"}
+fla.down="rrrrr1";
+fla.rigth="rrrrr2";
+fla.left="rrrrr3";
+
+
+
+function getAction(btn:Button){
+    console.log(`actoin before button up ${btn.up}`)
+    console.log(`actoin before button down ${btn.down}`)
+    console.log(`actoin before button left ${btn.left}`)
+    console.log(`actoin before button right ${btn.rigth}`)
+}
+function getActionlast(btn:last){
+    console.log(`actoin before button up ${btn.up}`)
+    console.log(`actoin before button down ${btn.down}`)
+    console.log(`actoin before button left ${btn.left}`)
+    console.log(`actoin before button right ${btn.rigth}`)
+    console.log(`actoin xxxxxx ${btn.x}`)
+
+}
+console.log(getAction({up:"go-up",down:"go-right",left:"go-left",rigth:"go-down"}))
+console.log(getAction(fla))
+console.log(getActionlast({up:"go-up",down:"go-right",left:"go-left",rigth:"go-down",x:true}))
