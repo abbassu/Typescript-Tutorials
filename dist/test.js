@@ -18,25 +18,32 @@ let name1 = "abbas";
 name1 = "ahmad";
 let m1 = "ddddddd";
 m1 = 55;
-let fla;
-fla = { up: "rrrrr", down: "rrrrrrrrrrr", rigth: "ddddddd", left: "ssss" };
-fla.down = "rrrrr1";
-fla.rigth = "rrrrr2";
-fla.left = "rrrrr3";
+function getHardSecond() {
+    return 3;
+}
+var kids;
+(function (kids) {
+    kids[kids["five"] = 5] = "five";
+    kids[kids["seven"] = 7] = "seven";
+    kids[kids["ten"] = 10] = "ten";
+})(kids || (kids = {}));
+var level;
+(function (level) {
+    level[level["Easy"] = 5] = "Easy";
+    level[level["medium"] = getHardSecond()] = "medium";
+})(level || (level = {}));
 function getAction(btn) {
-    console.log(`actoin before button up ${btn.up}`);
-    console.log(`actoin before button down ${btn.down}`);
-    console.log(`actoin before button left ${btn.left}`);
-    console.log(`actoin before button right ${btn.rigth}`);
+    console.log(`hello ${btn.one}`);
+    console.log(`hello ${btn.two}`);
+    console.log(`hello ${btn.three}`);
+    console.log(`hello ${btn.four}`);
 }
-function getActionlast(btn) {
-    console.log(`actoin before button up ${btn.up}`);
-    console.log(`actoin before button down ${btn.down}`);
-    console.log(`actoin before button left ${btn.left}`);
-    console.log(`actoin before button right ${btn.rigth}`);
-    console.log(`actoin xxxxxx ${btn.x}`);
+function getActionNow(btn) {
+    console.log(`hello ${btn.one}`);
+    console.log(`hello ${btn.two}`);
+    console.log(`hello ${btn.three}`);
+    console.log(`hello ${btn.five}`);
 }
-console.log(getAction({ up: "go-up", down: "go-right", left: "go-left", rigth: "go-down" }));
-console.log(getAction(fla));
-console.log(getActionlast({ up: "go-up", down: "go-right", left: "go-left", rigth: "go-down", x: true }));
+getAction({ one: "stgin", two: 100, three: true, four: false });
+getActionNow({ one: "stgin", two: 100, three: true, five: false });
 //# sourceMappingURL=test.js.map

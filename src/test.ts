@@ -104,37 +104,188 @@ m1=55
 
 //////////////////////// 13
 
-type Button={
-    up:string,
-    down:string,
-    left:string,
-    rigth:string,
-}
-type last=Button&{
-    x:boolean
-}
-let fla:Button;
-fla={up:"rrrrr",down:"rrrrrrrrrrr",rigth:"ddddddd",left:"ssss"}
-fla.down="rrrrr1";
-fla.rigth="rrrrr2";
-fla.left="rrrrr3";
+// type Button={
+//     up:string,
+//     down:string,
+//     left:string,
+//     rigth:string,
+// }
+// type last=Button&{
+//     x:boolean
+// }
+// let fla:Button;
+// fla={up:"rrrrr",down:"rrrrrrrrrrr",rigth:"ddddddd",left:"ssss"}
+// fla.down="rrrrr1";
+// fla.rigth="rrrrr2";
+// fla.left="rrrrr3";
 
 
 
-function getAction(btn:Button){
-    console.log(`actoin before button up ${btn.up}`)
-    console.log(`actoin before button down ${btn.down}`)
-    console.log(`actoin before button left ${btn.left}`)
-    console.log(`actoin before button right ${btn.rigth}`)
-}
-function getActionlast(btn:last){
-    console.log(`actoin before button up ${btn.up}`)
-    console.log(`actoin before button down ${btn.down}`)
-    console.log(`actoin before button left ${btn.left}`)
-    console.log(`actoin before button right ${btn.rigth}`)
-    console.log(`actoin xxxxxx ${btn.x}`)
+// function getAction(btn:Button){
+//     console.log(`actoin before button up ${btn.up}`)
+//     console.log(`actoin before button down ${btn.down}`)
+//     console.log(`actoin before button left ${btn.left}`)
+//     console.log(`actoin before button right ${btn.rigth}`)
+// }
+// function getActionlast(btn:last){
+//     console.log(`actoin before button up ${btn.up}`)
+//     console.log(`actoin before button down ${btn.down}`)
+//     console.log(`actoin before button left ${btn.left}`)
+//     console.log(`actoin before button right ${btn.rigth}`)
+//     console.log(`actoin xxxxxx ${btn.x}`)
 
+// }
+// console.log(getAction({up:"go-up",down:"go-right",left:"go-left",rigth:"go-down"}))
+// console.log(getAction(fla))
+// console.log(getActionlast({up:"go-up",down:"go-right",left:"go-left",rigth:"go-down",x:true}))
+
+
+
+//////////////////////// 14
+
+// type numsss= 0 | 1 | -1;
+
+// function compareAdd(num1:number,num2:number) : 1| -1 | 0 {
+
+//     if(num1===num2){
+//         return 1;
+//     }
+//     else if(num1>num2){
+//         return 0;
+//     }
+//     else{
+//         return -1;
+//     }
+    // return 0;
+// }
+// console.log(compareAdd(20,20))
+// console.log(compareAdd(20,15))
+// console.log(compareAdd(15,20))
+
+//////////////////////// 15
+
+// tuple   another sort of array type 
+// let article :[number,string,boolean]=[12,"ahmad",true];
+// article.push(1000)
+// console.log(article)
+// -----------------------------------------------------------
+// let articlee : readonly [number,string,boolean]=[12,"ahmad",true];
+// // articlee.push(123)//error
+// console.log(article)
+
+//------------------------------------------------------------
+
+//destructing 
+// const [id,name3,b]=article
+// console.log(id)
+// console.log(name3)
+// console.log(b)
+
+//////////////////////// 16
+  //void
+
+// function logging(msg:string):string{
+//     console.log(msg)
+//     return msg;
+// }
+// console.log(logging("hello"))
+
+// function loggingv(msg:string):void{
+//     console.log(msg)
+//     return;
+// }
+// console.log(loggingv("hellov"))
+
+//never
+
+// function alwaysLog(msg:string) :never{
+//     while(true){
+//         console.log(msg)
+//     }
+//     // return 55
+// }
+
+
+//////////////////////// 17
+// const enum level {
+//     Easy=10,
+//     medium =12,
+//     hard= 13
+// }
+
+// let lvl:string = "easy"
+
+// if(lvl==="easy"){
+//     console.log(`the level is ${lvl} and number of seconds is ${level.Easy}`)
+// }
+//////////////////////// 18
+
+function getHardSecond():number {
+    return 3;
 }
-console.log(getAction({up:"go-up",down:"go-right",left:"go-left",rigth:"go-down"}))
-console.log(getAction(fla))
-console.log(getActionlast({up:"go-up",down:"go-right",left:"go-left",rigth:"go-down",x:true}))
+
+
+enum kids{
+    five =5,
+    seven =7,
+    ten=10
+}
+
+
+enum level {
+    Easy=kids.five,
+    medium =getHardSecond(),
+    // hard,
+}
+
+//////////////////////// 19
+
+// let myImg= document.getElementById("aa") as HTMLInputElement; //// or  <HTMLInputElement> document.getElementById("aa") 
+// console.log(myImg.src)
+
+
+// let data :any =10000;
+// console.log(data.)/
+
+
+//////////////////////// 20
+
+
+// type A = {
+//     one : string,
+//     two : number,
+//     three : boolean
+// }
+// type B =A & {
+//     four:boolean
+// }
+// type C = {
+//     five : boolean
+// }
+
+// type Mix = A&C  ///// intersection 
+// function getAction(btn : B){
+//     console.log(`hello ${btn.one}`)
+//     console.log(`hello ${btn.two}`)
+//     console.log(`hello ${btn.three}`)
+//     console.log(`hello ${btn.four}`)
+// }
+
+// function getActionNow(btn : Mix){
+
+//     console.log(`hello ${btn.one}`)
+//     console.log(`hello ${btn.two}`)
+//     console.log(`hello ${btn.three}`)
+//     console.log(`hello ${btn.five}`)
+
+// }
+
+
+// getAction({one : "stgin",two : 100,three:true,four:false})
+
+// getActionNow({one : "stgin",two : 100,three:true,five:false})
+
+
+
+
+
