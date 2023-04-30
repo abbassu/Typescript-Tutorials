@@ -288,4 +288,130 @@ enum level {
 
 
 
+//////////////////////// 21
+
+
+// let myObject : {
+//     readonly username:string,
+//     id:number,
+//     hire?:boolean,
+//     skill:{
+//         one : string,
+//         two : string
+//     }
+// } ={
+//     username:"elzero",
+//     id : 199,
+//     // hire: true,
+//     skill: {
+//         one : "HTML",
+//         two : "CSS"
+//     }
+// }
+// // myObject.username= "Abbas";
+// myObject.hire=false
+
+// console.log(myObject.username)
+// console.log(myObject.hire)
+
+
+
+//////////////////////// 22
+// interface like type it is describe shape of objects or elements
+
+// interface User{
+//     id?:number,
+//     readonly username:string,
+//     country:string,
+//     sayHello(): string,/// what will back
+//     sayWelcome: ()=> string,
+//     getDouble(num:number): number
+// }
+
+// let user:User ={
+//     // id:100,
+//     username:"elzero",
+//     country:"nablus",
+//     sayHello(){
+//         return " hello man"
+//     },
+//     sayWelcome() {
+//         return " welcome man"
+//     },
+//     getDouble(n) {
+//         return n *12
+//     },
+// }
+// function getData(data:User){
+//     console.log(`user is ${data.username}`)
+
+//     console.log(`user is ${data.country}`)
+//     // console.log(`user is ${data.id}`)
+
+// }
+
+// console.log(user.id)
+// console.log(user.username)
+// console.log(user.country)
+// console.log(user.sayHello())
+// console.log(user.sayWelcome())
+// console.log(user.getDouble(4))
+
+//////////////////////// 24
+//////////////// open interface 
+/////// home page
+
+
+// interface settings{
+//     theme:boolean,
+//     font : string
+// }
+
+// /////// articles page
+// interface settings{
+//     sidebar : boolean
+// }
+
+// /////// contact page 
+// interface settings{
+//     external: boolean
+// }
+
+// let userInterface :settings = {
+//     theme : true,
+//     font : "open sans",
+//     sidebar : false,
+//     external : true
+// }
+
+//////////////////////// 25
+
+
+// interface User {
+//     id :number,
+//     username:string,
+//     country:string,
+// }
+
+// interface Action {
+//     protect : string
+// }
+
+// interface Modulator extends User,Action {
+//     role : string | number
+// }
+
+
+// let user : Modulator  ={
+//     id : 100,
+//     username: "Elzero",
+//     country : "jenin",
+//     role : 55,
+//     protect:"llll"
+// }
+// console.log(user.id)
+
+
+//////////////////////// 26
+
 

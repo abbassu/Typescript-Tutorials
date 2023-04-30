@@ -32,18 +32,11 @@ var level;
     level[level["Easy"] = 5] = "Easy";
     level[level["medium"] = getHardSecond()] = "medium";
 })(level || (level = {}));
-function getAction(btn) {
-    console.log(`hello ${btn.one}`);
-    console.log(`hello ${btn.two}`);
-    console.log(`hello ${btn.three}`);
-    console.log(`hello ${btn.four}`);
-}
-function getActionNow(btn) {
-    console.log(`hello ${btn.one}`);
-    console.log(`hello ${btn.two}`);
-    console.log(`hello ${btn.three}`);
-    console.log(`hello ${btn.five}`);
-}
-getAction({ one: "stgin", two: 100, three: true, four: false });
-getActionNow({ one: "stgin", two: 100, three: true, five: false });
+let user = {
+    id: 100,
+    username: "Elzero",
+    country: "jenin",
+    role: 55
+};
+console.log(user.id);
 //# sourceMappingURL=test.js.map
