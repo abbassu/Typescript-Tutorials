@@ -18,25 +18,35 @@ let name1 = "abbas";
 name1 = "ahmad";
 let m1 = "ddddddd";
 m1 = 55;
-function getHardSecond() {
-    return 3;
+class Player {
+    constructor(name) {
+        this.name = name;
+    }
+    attack() {
+    }
 }
-var kids;
-(function (kids) {
-    kids[kids["five"] = 5] = "five";
-    kids[kids["seven"] = 7] = "seven";
-    kids[kids["ten"] = 10] = "ten";
-})(kids || (kids = {}));
-var level;
-(function (level) {
-    level[level["Easy"] = 5] = "Easy";
-    level[level["medium"] = getHardSecond()] = "medium";
-})(level || (level = {}));
-let user = {
-    id: 100,
-    username: "Elzero",
-    country: "jenin",
-    role: 55
-};
-console.log(user.id);
+class Amazon extends Player {
+    constructor(name, spearc) {
+        super(name);
+        this.spearc = spearc;
+    }
+    attack() {
+        console.log("attaking amazon");
+        this.spearc -= 1;
+    }
+}
+class Barbian extends Player {
+    constructor(name, axe) {
+        super(name);
+        this.axe = axe;
+    }
+    attack() {
+        console.log("attaking amazon");
+        this.axe -= 1;
+    }
+}
+let bar = new Barbian("elzero", 55);
+console.log(bar.name);
+bar.attack();
+console.log(bar.axe);
 //# sourceMappingURL=test.js.map
